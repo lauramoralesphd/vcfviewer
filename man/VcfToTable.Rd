@@ -5,7 +5,7 @@
 VcfToTable(vcf.file)
 }
 \arguments{
-  \item{vcf.file}{String specifying name of VCF file in *.vcf or *.vcf.gz format}
+  \item{vcf.file}{String specifying name of VCF file with .vcf or .vcf.gz format}
 }
 \value{
 Data frame containing data from \code{vcf.file}
