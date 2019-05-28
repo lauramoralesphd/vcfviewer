@@ -72,18 +72,18 @@ PlotVcf <- function(vcf.table, plot.type=c("sep","joint"), samples=NULL,
   #   allele column has allele calls, which will be assigned distinct colors
   #   index column specifies y-axis positions
   #   marker column has site positions, which may be plotted as vertical lines
-  pp1 <- unlist(pos.start)
-  pp2 <- unlist(pos.stop)
-  ppc <- unlist(pos.chrom)
+  pos.start <- unlist(pos.start)
+  pos.stop <- unlist(pos.stop)
+  pos.chrom <- unlist(pos.chrom)
   samples <- colnames(vcf.table)[10:ncol(vcf.table)]
   gen <- as.data.frame(matrix(nrow=(nrow(vcf.table)*length(samples)), ncol=7))
   colnames(gen) <- c("sample", "chr", "start", "end", "allele", "index",
                      "marker")
   gen$sample <- rep(samples, nrow(vcf.table))
   gen$sample <- gen$sample[order(match(gen$sample, samples))]
-  gen$chr <- rep(ppc, length(samples))
-  gen$start <- rep(pp1, length(samples))
-  gen$end <- rep(pp2, length(samples))
+  gen$chr <- rep(pos.chrom, length(samples))
+  gen$start <- rep(pos.start, length(samples))
+  gen$end <- rep(pos.stop, length(samples))
   gen$index <- sort(rep(1:length(samples), nrow(vcf.table)))
   gen$marker <- rep(as.numeric(vcf.table$POS), length(samples))
   gt <- NULL
