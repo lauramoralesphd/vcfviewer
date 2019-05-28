@@ -5,11 +5,11 @@ Version: 0.1.0
 Author: Laura Morales <lauramoralesphd@gmail.com> [aut, cre]
     Norman Warthmann <n.warthmann@iaea.org> [aut]
 Maintainer: Laura Morales <lauramoralesphd@gmail.com>
-Description: Functions for visualizing genotype data from VCF files, including plotting genotypes across individuals/samples and allele frequencies.
+Description: Functions for visualizing genotype data from VCF files.
 License: GPL-3
 URL: https://github.com/lauramoralesphd/vcfviewer
 BugReports: https://github.com/lauramoralesphd/vcfviewer/issues
 Encoding: UTF-8
 LazyData: true
 Imports:
-    ggplot2, vcfR 
+    ggplot2, vcfR
