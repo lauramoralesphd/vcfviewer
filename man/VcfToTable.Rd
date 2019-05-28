@@ -1,5 +1,5 @@
 \name{VcfToTable}
-\alias{}
+\alias{VcfToTable}
 \title{Convert VCF file to data frame}
 \usage{
 VcfToTable(vcf.file)
