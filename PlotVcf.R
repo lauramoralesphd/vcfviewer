@@ -1,6 +1,6 @@
 PlotVcf <- function(vcf.table, plot.type=c("sep","joint"), samples=NULL,
                     sites=NULL, scaled=T, allele.colors=NULL, site.color=NULL){
-  # Generates genotype plot from VCF table.
+  # Generates genotype plot(s) from VCF table.
   #
   # Args
   #   vcf.table: VCF table from which genotype plot will be generated. VCF table
@@ -116,7 +116,7 @@ PlotVcf <- function(vcf.table, plot.type=c("sep","joint"), samples=NULL,
     }
     genplot <- genplot + facet_grid(. ~ chr)
     return(genplot)
-  # If "sep" plot.type, generate separate genotype plots for each chromosome
+  # If "sep" plot.type, generate list of chromosome-specific genotype plots
     }else{
       genplot.list <- list()
     for (i in 1:length(unique(vcf.table$CHROM))) {
