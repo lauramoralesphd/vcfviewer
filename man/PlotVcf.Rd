@@ -1,5 +1,5 @@
 \name{PlotVcf}
-\alias{}
+\alias{PlotVcf}
 \title{Plot VCF genotypes}
 \usage{
 PlotVcf(vcf.table, samples=NULL, sites=NULL, scaled=T, allele.colors=NULL,
