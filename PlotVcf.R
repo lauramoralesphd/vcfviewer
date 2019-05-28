@@ -3,7 +3,8 @@ PlotVcf <- function(vcf.table, plot.type=c("sep","joint"), samples=NULL,
   # Generates genotype plot from VCF table.
   #
   # Args
-  #   vcf.table: VCF table from which genotype plot will be generated.
+  #   vcf.table: VCF table from which genotype plot will be generated. VCF table
+  #              can be generated with VcfToTable function.
   #   samples: Optional character vector of sample/individual names, which can
   #            be used to specify the order in which samples will be plotted.
   #   sites: Optional character vector of site IDs specifying the order in which
